@@ -1,0 +1,38 @@
+﻿<Window x:Class="外设检测.XinputFrame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:外设检测"
+        mc:Ignorable="d"
+        Title="Xinput信息" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="robBtn" Content="震动" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="robBtn_Click"/>
+        <TextBox x:Name="leftmoto" HorizontalAlignment="Left" Height="23" Margin="90,11,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="98"/>
+        <TextBox x:Name="rightmoto" HorizontalAlignment="Left" Height="23" Margin="193,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="motoStop" Content="停止" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="stop_Click"/>
+        <Label x:Name="mototip0" Content="左马达 0-65535" HorizontalAlignment="Left" Margin="90,38,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="mototip1" Content="右马达 0-65535" HorizontalAlignment="Left" Margin="193,38,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="btnLab" Content="按键" HorizontalAlignment="Left" Margin="11,284,0,0" VerticalAlignment="Top" Width="497"/>
+        <Canvas x:Name="dpadCan" HorizontalAlignment="Left" Height="128" Margin="10,101,0,0" VerticalAlignment="Top" Width="128">
+            <Line X1="0" Y1="64" X2="128" Y2="64" Stroke="Black" StrokeThickness="1" />
+            <Line X1="64" Y1="0" X2="64" Y2="128" Stroke="Black" StrokeThickness="1" />
+            <Label x:Name="dLine" Content="" Canvas.Left="60" Canvas.Top="60" Background="Red" Width="8" Height="8"/>
+        </Canvas>
+        <Canvas x:Name="lCan" HorizontalAlignment="Left" Height="128" Margin="154,101,0,0" VerticalAlignment="Top" Width="128">
+            <Line X1="0" Y1="64" X2="128" Y2="64" Stroke="Black" StrokeThickness="1" />
+            <Line X1="64" Y1="0" X2="64" Y2="128" Stroke="Black" StrokeThickness="1" />
+            <Label x:Name="lPoint" Content="" Canvas.Left="64" Canvas.Top="64" Background="Red" Width="4" Height="4"/>
+        </Canvas>
+        <Canvas x:Name="rCan" HorizontalAlignment="Left" Height="128" Margin="305,101,0,0" VerticalAlignment="Top" Width="128">
+            <Line X1="0" Y1="64" X2="128" Y2="64" Stroke="Black" StrokeThickness="1" />
+            <Line X1="64" Y1="0" X2="64" Y2="128" Stroke="Black" StrokeThickness="1" />
+            <Label x:Name="rPoint" Content="" Canvas.Left="64" Canvas.Top="64" Background="Red" Width="4" Height="4"/>
+        </Canvas>
+        <Label x:Name="raxixLab" Content="0 0" HorizontalAlignment="Left" Margin="204,234,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="laxixLab" Content="0 0" HorizontalAlignment="Left" Margin="356,234,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lMotoLab" Content="255" HorizontalAlignment="Left" Margin="402,11,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="rMotoLab" Content="255" HorizontalAlignment="Left" Margin="438,11,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="motoLock" Content="锁定震动:Flase" HorizontalAlignment="Left" Margin="402,41,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
